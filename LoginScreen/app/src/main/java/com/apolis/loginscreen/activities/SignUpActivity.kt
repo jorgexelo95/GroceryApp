@@ -22,7 +22,7 @@ class SignUpActivity : AppCompatActivity() {
                 tabLayout.setupWithViewPager(viewPager)
             }
             true ->{
-                var intent = Intent(this, MainActivityCart::class.java)
+                var intent = Intent(this, CategoryActivity::class.java)
                 startActivity(intent)
             }
         }

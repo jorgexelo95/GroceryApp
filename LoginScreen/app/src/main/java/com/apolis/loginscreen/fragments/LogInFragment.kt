@@ -15,6 +15,7 @@ import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.apolis.loginscreen.R
+import com.apolis.loginscreen.activities.CategoryActivity
 import com.apolis.loginscreen.activities.MainActivityCart
 import com.apolis.loginscreen.model.LogInResponse
 import com.apolis.loginscreen.model.LoginModel
@@ -85,8 +86,8 @@ class LogInFragment : Fragment() {
                 var gson2 = GsonBuilder().create()
                 val loginResponse: LogInResponse = gson2.fromJson(response.toString(), LogInResponse::class.java)
                 Toast.makeText(activity, "${loginResponse.user.email}", Toast.LENGTH_SHORT).show()
-                //progressbar.visibility = View.GONE
-               //startActivity(Intent(activity, MainActivityCart::class.java))
+                progressbar.visibility = View.GONE
+               startActivity(Intent(activity, CategoryActivity::class.java))
             },
             Response.ErrorListener {
                 Toast.makeText(activity, "Log in unsuccessful", Toast.LENGTH_SHORT).show()

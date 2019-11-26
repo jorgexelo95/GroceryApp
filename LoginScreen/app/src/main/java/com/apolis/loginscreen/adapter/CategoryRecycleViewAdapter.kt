@@ -26,38 +26,38 @@ class CategoryRecycleViewAdapter(var context: Context, var productList: ArrayLis
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val products = productList.get(position)
-        holder.bindProduct(products)
+//        holder.bindProduct(products)
 
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bindProduct(products: Product) {
-            var textViewName = itemView.textView_product_name
-            var textViewPrice = itemView.textView_product_price
-            var imageView = itemView.imageView_product
-
-            textViewName.text = products.product
-            textViewPrice.text = products.price
-            imageView.setImageResource(products.img)
-
-            itemView.button_addToCart.setOnClickListener {
-                itemView.button_addToCart.visibility = View.GONE
-                itemView.linearlayout_buttons.visibility = View.VISIBLE
-            }
-            itemView.button_add.setOnClickListener {
-                itemView.textView_quantity.text =
-                    (itemView.textView_quantity.text.toString().toInt() + 1).toString()
-            }
-            itemView.button_minus.setOnClickListener {
-                if (itemView.textView_quantity.text.toString().toInt() == 0) {
-                } else itemView.textView_quantity.text =
-                    (itemView.textView_quantity.text.toString().toInt() - 1).toString()
-            }
-            itemView.button_delete.setOnClickListener {
-                productList.removeAt(position)
-                notifyItemRemoved(position)
-            }
-        }
+//        fun bindProduct(products: Product) {
+//            var textViewName = itemView.textView_product_name
+//            var textViewPrice = itemView.textView_product_price
+//            var imageView = itemView.imageView_product
+//
+//            textViewName.text = products.product
+//            textViewPrice.text = products.price
+//            imageView.setImageResource(products.img)
+//
+//            itemView.button_addToCart.setOnClickListener {
+//                itemView.button_addToCart.visibility = View.GONE
+//                itemView.linearlayout_buttons.visibility = View.VISIBLE
+//            }
+//            itemView.button_add.setOnClickListener {
+//                itemView.textView_quantity.text =
+//                    (itemView.textView_quantity.text.toString().toInt() + 1).toString()
+//            }
+//            itemView.button_minus.setOnClickListener {
+//                if (itemView.textView_quantity.text.toString().toInt() == 0) {
+//                } else itemView.textView_quantity.text =
+//                    (itemView.textView_quantity.text.toString().toInt() - 1).toString()
+//            }
+//            itemView.button_delete.setOnClickListener {
+//                productList.removeAt(position)
+//                notifyItemRemoved(position)
+//            }
+//        }
     }
 
 }

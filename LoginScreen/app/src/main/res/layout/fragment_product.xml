@@ -1,86 +1,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="0dp">
+
+    android:layout_height="match_parent">
 
 
-    <ImageView
+
+    <TextView
+        android:textSize="32dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/product_text_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_delete_black_24dp"
-        android:layout_alignParentRight="true"
-        android:id="@+id/button_delete"/>
-
-    <ImageView
-        android:id="@+id/imageView_product"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginRight="10dp"
-        android:src="@drawable/mobilephone" />
-
-    <LinearLayout
-        android:id="@+id/linearlayout_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/imageView_product"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView_product_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name of product"
-            android:textColor="#000000"
-            android:textSize="16dp" />
-
-        <TextView
-            android:id="@+id/textView_product_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textView_product_name"
-            android:layout_marginTop="5dp"
-            android:text="Price of product" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearlayout_buttons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <Button
-            android:id="@+id/button_minus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-" />
-
-        <TextView
-            android:id="@+id/textView_quantity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1" />
-
-        <Button
-            android:id="@+id/button_add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+" />
-
-    </LinearLayout>
-
-
-    <Button
-        android:id="@+id/button_addToCart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:text="Add to cart" />
+        android:layout_height="wrap_content"/>
 
 
 </RelativeLayout>
